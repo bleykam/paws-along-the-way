@@ -1,0 +1,64 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/mixins";
+@use "../../styles/partials/fonts";
+
+.edit-request {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    @include mixins.tablet{
+        padding: 2.5rem;
+    }
+    include mixins.desktop{
+        padding: 5rem;
+    }
+
+    &__title {
+        padding: 1rem;
+        color: colors.$secondary-slate;
+    }
+
+    &__org {
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1rem;
+        color: colors.$secondary-text;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__div {
+        display: flex;
+        flex-direction: column; 
+        margin-bottom: 0.625rem;
+
+      }
+
+      &__label {
+        align-self: flex-start;
+        margin-bottom: 0.5rem;
+        color: colors.$primary-black;
+    }
+
+    &__input {
+        border: 0.0625rem solid colors.$primary-border;
+        border-radius: .3rem;
+        flex: 1;
+        padding: 0.3125rem;
+        box-shadow: -0.1875rem 0.1875rem 0.625rem 0rem rgba(185, 185, 185, 0.88) inset;
+    }
+
+    &__button {
+        @include mixins.button;
+    }
+
+    &__checkbox {
+      display: flex;
+        align-items: start;
+    }
+}

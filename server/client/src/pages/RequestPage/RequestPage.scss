@@ -1,0 +1,23 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/mixins";
+
+.request-page {
+  &__div {
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: colors.$primary-background;
+    border: 0.0625rem solid colors.$secondary-text;
+    margin-bottom: 1rem;
+    @include mixins.tablet {
+      margin: 1 2.5rem;
+    }
+    @include mixins.desktop {
+      margin: 1rem 5rem;
+    }
+  }
+  &__title {
+    color: colors.$secondary-slate;
+    margin: 1rem;
+  }
+}

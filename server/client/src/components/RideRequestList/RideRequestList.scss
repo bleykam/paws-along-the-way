@@ -1,0 +1,58 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/mixins";
+
+.request-list {
+  display: flex;
+  justify-content: center;
+  color: colors.$primary-blue;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid colors.$primary-border;
+  color: colors.$primary-blue;
+  padding: 1rem;
+
+  @include mixins.tablet {
+    border-bottom: none;
+    padding: 2rem;
+  }
+
+  &__link {
+    color: colors.$primary-blue;
+    text-decoration: none;
+  }
+
+  &__title {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: colors.$primary-blue;
+    border-bottom: 0.0625rem solid colors.$primary-border;
+
+    @include mixins.tablet {
+      padding: 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    color: colors.$primary-blue;
+    text-decoration: none;
+
+    @include mixins.tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    color: colors.$primary-blue;
+    text-decoration: none;
+    border-bottom: 0.0625rem solid colors.$primary-border;
+    
+    @include mixins.tablet {
+      border-bottom: none;
+    }
+  }
+}

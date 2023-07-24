@@ -1,0 +1,65 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/mixins";
+
+.profile {
+    background-color: colors.$primary-background;
+
+    &__logged-out{
+        background-color: colors.$background-cards;
+        padding: 1rem;
+    }
+
+    &__logged-out-link{
+        background-color: colors.$background-cards;
+        padding: 1rem;
+
+    }
+
+
+    &__heading {
+        margin: 0 0 1rem;
+        padding: 0 0 0.5rem;
+        border-bottom: 0.3125rem solid colors.$primary-border;
+    }
+
+    &__logout {
+        @include mixins.button;
+        margin-top: 2rem;
+    }
+
+
+    &__title {
+        font-size: 2rem;
+        padding: 1rem;
+        color: colors.$secondary-slate;
+        text-align: left;
+        @include mixins.tablet{
+            padding: 0;
+        }
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+
+    &__button{
+        @include mixins.button;
+    }
+    &__section{
+        @include mixins.tablet {
+            margin: 1rem 2.5rem;
+        }
+        @include mixins.desktop {
+            margin: 1rem 5rem;
+        }
+    }
+
+    &__table{
+        border: 2px solid red;
+    }
+    &__table-row{
+        border: 2px solid hotpink;
+    }
+  
+}
+

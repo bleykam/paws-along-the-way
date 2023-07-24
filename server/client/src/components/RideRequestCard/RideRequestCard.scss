@@ -1,0 +1,74 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/mixins";
+
+.ride-card {
+  margin: 1rem;
+  background-color: colors.$background-cards;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid colors.$primary-green;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+
+  @include mixins.tablet {
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
+
+  &__title {
+    border-bottom: 0.0625rem solid colors.$primary-green;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.tablet {
+      justify-content: space-between;
+    }
+  }
+
+  &__animal {
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__date {
+    border-bottom: 0.0625rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    @include mixins.tablet {
+      border-bottom: none;
+      justify-content: space-between;
+    }
+  }
+
+  &__button {
+    @include mixins.button;
+  }
+
+  &__location {
+    padding-bottom: 0.5rem;
+  }
+
+  &__label {
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    justify-content: space-between;
+    color: colors.$secondary-slate;
+  }
+
+  &__driver {
+    padding: 0.5rem;
+    font-weight: 600;
+    color: colors.$primary-yellow;
+  }
+}
+
+a {
+  text-decoration: none;
+}
